@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *TableViews;
 
 @end
 
@@ -19,5 +20,8 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-
+-(void)createUI{
+    
+    
+}
 @end

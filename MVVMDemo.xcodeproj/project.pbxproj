@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,10 @@
 		6578E44823054AAB004BC1CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6578E44723054AAB004BC1CF /* main.m */; };
 		6578E45223054AAC004BC1CF /* MVVMDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6578E45123054AAC004BC1CF /* MVVMDemoTests.m */; };
 		6578E45D23054AAC004BC1CF /* MVVMDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6578E45C23054AAC004BC1CF /* MVVMDemoUITests.m */; };
+		6578E46F23054F51004BC1CF /* PicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6578E46E23054F51004BC1CF /* PicModel.m */; };
+		6578E47323054F8F004BC1CF /* PicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6578E47123054F8F004BC1CF /* PicTableViewCell.m */; };
+		6578E47423054F8F004BC1CF /* PicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6578E47223054F8F004BC1CF /* PicTableViewCell.xib */; };
+		6578E47723054FA4004BC1CF /* PicViewModels.m in Sources */ = {isa = PBXBuildFile; fileRef = 6578E47623054FA4004BC1CF /* PicViewModels.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,13 @@
 		6578E45823054AAC004BC1CF /* MVVMDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6578E45C23054AAC004BC1CF /* MVVMDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MVVMDemoUITests.m; sourceTree = "<group>"; };
 		6578E45E23054AAC004BC1CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6578E46D23054F51004BC1CF /* PicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PicModel.h; sourceTree = "<group>"; };
+		6578E46E23054F51004BC1CF /* PicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PicModel.m; sourceTree = "<group>"; };
+		6578E47023054F8F004BC1CF /* PicTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PicTableViewCell.h; sourceTree = "<group>"; };
+		6578E47123054F8F004BC1CF /* PicTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PicTableViewCell.m; sourceTree = "<group>"; };
+		6578E47223054F8F004BC1CF /* PicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PicTableViewCell.xib; sourceTree = "<group>"; };
+		6578E47523054FA4004BC1CF /* PicViewModels.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PicViewModels.h; sourceTree = "<group>"; };
+		6578E47623054FA4004BC1CF /* PicViewModels.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PicViewModels.m; sourceTree = "<group>"; };
 		9C8A912B3B9D00996ABBD7D7 /* libPods-MVVMDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MVVMDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7FAEBFAF5353D0CAA342C12 /* Pods-MVVMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVMDemo.release.xcconfig"; path = "Target Support Files/Pods-MVVMDemo/Pods-MVVMDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +119,9 @@
 		6578E43723054AAA004BC1CF /* MVVMDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6578E46C23054F2A004BC1CF /* ViewModel */,
+				6578E46B23054F24004BC1CF /* Model */,
+				6578E46A23054F19004BC1CF /* View */,
 				6578E43823054AAA004BC1CF /* AppDelegate.h */,
 				6578E43923054AAA004BC1CF /* AppDelegate.m */,
 				6578E43B23054AAA004BC1CF /* ViewController.h */,
@@ -139,13 +153,40 @@
 			path = MVVMDemoUITests;
 			sourceTree = "<group>";
 		};
+		6578E46A23054F19004BC1CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6578E47023054F8F004BC1CF /* PicTableViewCell.h */,
+				6578E47123054F8F004BC1CF /* PicTableViewCell.m */,
+				6578E47223054F8F004BC1CF /* PicTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6578E46B23054F24004BC1CF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6578E46D23054F51004BC1CF /* PicModel.h */,
+				6578E46E23054F51004BC1CF /* PicModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6578E46C23054F2A004BC1CF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6578E47523054FA4004BC1CF /* PicViewModels.h */,
+				6578E47623054FA4004BC1CF /* PicViewModels.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C7F8936ED63A7625ED60E657 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				2D750D99FA9C68E45D2E1005 /* Pods-MVVMDemo.debug.xcconfig */,
 				C7FAEBFAF5353D0CAA342C12 /* Pods-MVVMDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -262,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6578E47423054F8F004BC1CF /* PicTableViewCell.xib in Resources */,
 				6578E44523054AAB004BC1CF /* LaunchScreen.storyboard in Resources */,
 				6578E44223054AAB004BC1CF /* Assets.xcassets in Resources */,
 				6578E44023054AAA004BC1CF /* Main.storyboard in Resources */,
@@ -331,8 +373,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6578E47323054F8F004BC1CF /* PicTableViewCell.m in Sources */,
+				6578E47723054FA4004BC1CF /* PicViewModels.m in Sources */,
 				6578E43D23054AAA004BC1CF /* ViewController.m in Sources */,
 				6578E44823054AAB004BC1CF /* main.m in Sources */,
+				6578E46F23054F51004BC1CF /* PicModel.m in Sources */,
 				6578E43A23054AAA004BC1CF /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,6 +553,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YPS8ZP6GZ6;
 				INFOPLIST_FILE = MVVMDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -526,6 +572,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YPS8ZP6GZ6;
 				INFOPLIST_FILE = MVVMDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
